@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Fenix Configurator</string>
+    <string name="title_activity_main">Fenix Configurator</string>
+    <string name="package_name">org.fenix.configurator.app</string>
+    <string name="custom_url_scheme">org.fenix.configurator.app</string>
+</resources>
