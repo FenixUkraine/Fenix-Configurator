@@ -37,10 +37,11 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install Dependencies
         run: |
-          npm install -g @quasar/cli
-          npm i
+          yarn install --frozen-lockfile
+          # npm install -g @quasar/cli
+          # npm i
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
