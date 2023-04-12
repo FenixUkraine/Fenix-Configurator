@@ -1,6 +1,13 @@
 
 const routes = [
   {
+    path: '/configurator',
+    component: () => import('src/layouts/ConfiguratorLayout.vue'),
+    children: [
+      { path: 'programs', component: () => import('pages/ConfiguratorPrograms.vue') }
+    ]
+  },
+  {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
