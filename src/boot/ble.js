@@ -15,7 +15,8 @@ class BLE {
   async connect() {
     console.log("Connecting...", this);
     this.device = await navigator.bluetooth.requestDevice({
-      filters: [{ services: [this.PRIMARY_SERVICE] }],
+      //filters: [{ services: [this.PRIMARY_SERVICE] }],
+      filters: [{ namePrefix: "pc_" }],
     });
     this.server = await this.device.gatt.connect();
     this.service = await this.server.getPrimaryService(this.PRIMARY_SERVICE);
